@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Website Layout</title>
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: row;
+      margin: 0;
+    }
+
+    .column-1 {
+      background: grey;
+      flex: 1;
+    }
+
+    .column-2 {
+      display: flex;
+      flex-direction: column;
+      flex: 5;
+    }
+
+    header, footer {
+      font-size: 1em;
+      min-height: 20vh;
+      background: rgb(107, 185, 238);
+    }
+
+    header, footer, article, nav, aside {
+      padding: 1em;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      min-height: 60vh;
+    }
+
+    article {
+      flex: 3;
+    }
+
+    aside {
+      flex: 1;
+      background: rgb(252, 112, 182);
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <nav class="column-1">Navigation Menu</nav>
+  
+  <div class="column-2">
+    <header>Header
+      <h1>Flexbox Website Layout Example</h1>
+    </header>
+    
+    <main class="content">
+      <article>Article
+        <h3>What is Flexbox in CSS ?</h3>
+        <p>The Flexbox Layout (Flexible Box) module (a W3C Candidate Recommendation as of October 2017) 
+          aims at providing a more efficient way to lay out, align and distribute space among items in a container, 
+          even when their size is unknown and/or dynamic (thus the word “flex”).</p>
+
+        <p>The main idea behind the flex layout is to give the container the ability to alter its items’ width/height
+           (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). 
+           A flex container expands items to fill available free space or shrinks them to prevent overflow.</p>
+          
+        <p>Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts 
+          (block which is vertically-based and inline which is horizontally-based). While those work well for pages, 
+          they lack flexibility (no pun intended) to support large or complex applications 
+          (especially when it comes to orientation changing, resizing, stretching, shrinking, etc.).</p>
+      </article>
+      <aside>Aside
+        <h4><strong>Related Links</strong></h4>
+      </aside>
+    </main>
+    
+    <footer>Footer
+      <p>To know about us, visit <a href="https://www.bridgelabz.com/">Bridgelabz</a>
+    </footer>
+  </div>
+
+</body>
+
+</html>

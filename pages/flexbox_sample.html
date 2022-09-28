@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CodePen - Demo Flexbox 3</title>
+        <style>
+         body {padding: 2em;}
+            
+         .headerContainer {
+           display: flex;
+           flex-flow: column wrap;
+           align-content: center;
+           background: tomato;
+           font-weight: bold;
+           padding: 10px;
+         }
+         .footerContainer {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        background: lightgreen;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      .mainContainer {
+        display: flex;
+        flex-flow: row wrap;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .mainContentItem {
+        text-align: left;
+        background: deepskyblue;
+      }
+
+      .sideBarLeftItem { 
+        background: gold;
+        order: 1;
+      }
+
+      .sideBarRightItem { 
+        background: hotpink;
+        order: 3;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+      }
+
+      .sideBarItem { flex: 1 0 0; border: 0px solid green ; }
+      .mainContentItem { flex: 3 0px; order: 2; }
+
+
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer"><h1>HEADER - Sample Flexbox Example</h1></header> 
+        <div class="mainContainer" >
+         <section class="mainContentItem">
+            <article>
+                <h2>What is HTML</h2>
+        
+                <p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. 
+                  It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+        
+                <p>Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. 
+                  HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
+                  
+              </article>
+              <article>
+                <h2>What is Flexbox</h2>
+        
+                <p>The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, 
+                  and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. 
+                  This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.</p>
+              </article>
+        
+              <article>
+                <h2>What is CSS</h2>
+        
+                <p>CSS (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood?
+                  This article explains what CSS is, with a simple syntax example, and also covers some key terms about the language.</p>
+              </article>
+        </section>
+            <sideBar class="sideBarItem sideBarLeftItem"><div class="center"><p> Left Side Bar </p></div></sideBar>
+            <sideBar class="sideBarItem sideBarRightItem"><div class="center"><p> Right Side Bar </p></div></sideBar>
+
+        </div>
+    <footer class="footerContainer">footer</footer>
+</body>
+</html>
